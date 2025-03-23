@@ -39,8 +39,11 @@ jobs:
       run: dotnet build --configuration Release --no-restore
       working-directory: src/OneApp
 
+    - name: Debug Build Artifacts
+      run: ls -lR src/OneApp.Web/dist && ls -lR src/OneApp/bin/Release/net9.0
+
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: build-artifacts
         path: |
