@@ -43,7 +43,7 @@ jobs:
       run: ls -lR src/OneApp.Web/dist && ls -lR src/OneApp/bin/Release/net9.0
 
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: build-artifacts
         path: |
